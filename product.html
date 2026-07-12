@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Golden Glam Product</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<section class="product-page">
+
+    <div class="product-container">
+
+        <div class="product-image">
+
+            <img
+                id="product-image"
+                src=""
+                alt="Product">
+
+        </div>
+
+        <div class="product-details">
+
+            <h1 id="product-name"></h1>
+
+            <p
+                class="product-price"
+                id="product-price">
+            </p>
+
+            <p
+                class="product-description"
+                id="product-description">
+
+                Premium luxury fashion item from
+                Golden Glam Exotic Ventures.
+
+            </p>
+
+            <button
+                class="product-cart-btn">
+
+                Add To Cart
+
+            </button>
+
+            <a
+                href="https://wa.me/2347060754698"
+                target="_blank"
+                class="product-whatsapp-btn">
+
+                Buy On WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+const params =
+new URLSearchParams(window.location.search);
+
+const name =
+params.get("name");
+
+const price =
+params.get("price");
+
+const image =
+params.get("image");
+
+document.getElementById("product-name")
+.innerText = name;
+
+document.getElementById("product-price")
+.innerText = "₦" +
+Number(price).toLocaleString();
+
+document.getElementById("product-image")
+.src = image;
+
+</script>
+
+</body>
+
+</html>
